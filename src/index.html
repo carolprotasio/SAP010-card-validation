@@ -2,12 +2,43 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
+    <title>Validação de cartão de credito</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"/>
   </head>
   <body>
     <header></header>
-    <main></main>
+    <main>
+      <div class="card">
+        <form>
+            <h1 class="card_title">
+                Digite o número do cartão
+            </h1>
+            <div class="card_row">
+                <div class="card_col">
+                    <label for="cardNumber" class="card_label">Número do cartão:</label>
+                    <input type="text" class="card_input card_input--large" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx"/>
+                </div>
+                <div class="card_col card_chip"><img src="img/chip.svg" alt="chip"></div>
+            </div>
+            <div class="card_row">
+            <div class="card_col">
+                <label for="cardExpiry" class="card_label">Data de validade:</label>
+                <input type="text" class="card_input" id="cardExpiry" placeholder="xx/xx">
+            </div>
+            <div class="card_col">
+                <label for="cardCcv" class="card_label">CCV:</label>
+                <input type="text" class="card_input" id="cardCcv" placeholder="xxx">
+            </div>
+            <div class="card_col card_brand">
+                <i id="cardBrand"></i></div>
+            </div>
+        </form>
+    </div>
+    
+    </main>
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
