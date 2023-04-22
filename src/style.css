@@ -22,9 +22,9 @@ body {
     backdrop-filter: blur(0.8rem);
     border-radius: 1rem;
     padding: 1.5rem;
-    animation: 1s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
+    animation: 2s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
 
-    /*https://easings.net/#easeOutExpo - cubic-bezier*/
+    /* cubic-bezier - retirado desse site: https://easings.net/#easeOutExpo -*/
 }
 
 .card_row {
@@ -81,13 +81,30 @@ body {
     width: 3rem;
 }
 
+.bttn {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.732);
+    font-size: 1em;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 1px 5 px 7 px rgba(0, 0, 0, 0.577);
+}
+
+/* .footer {
+    display: flex;
+    align-self: flex-end;
+    
+} */
+
+
 @keyframes cardEnter {
     from {
-        transform: translateY(100vh);
+        transform: translateX(100vh);
         opacity: 0.05;
     }
     to {
-        transform: translateY(0);
+        transform: translateX(0);
         opacity: 1;
     }
 }
