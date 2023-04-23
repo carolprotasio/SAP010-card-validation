@@ -7,14 +7,15 @@
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"/>
+    <link rel="shortcut icon" href="img/iconCard.jpg" type="image/x-icon">
   </head>
   <body>
-    <header></header>
+    
     <main>
       <div class="card">
         <form>
             <h1 class="card_title">
-                Validação de cartão de credito
+                Validador de Cartão 
             </h1>
             <div class="card_row">
                 <div class="card_col">
@@ -24,7 +25,7 @@
                 <div class="card_col card_chip"><img src="img/chip.svg" alt="chip"></div>
             </div>
 
-            <div class="card_row">
+         <!--    <div class="card_row">
             <div class="card_col">
                 <label for="cardExpiry" class="card_label">Data de validade:</label>
                 <input type="text" class="card_input" id="cardExpiry" placeholder="xx/xx">
@@ -36,18 +37,38 @@
 
             <div class="card_col card_brand">
                 <i id="cardBrand"></i></div>
-            </div>
+            </div> -->
             <div>
-              <button class="bttn" type="submit" onclick="creditCardValidation(document.form1.cardNumber)">Validar</button>
+              <button class="bttn" type="submit" onclick="creditCardValidation()">Validar</button>
             </div>
         </form>
     </div>
     
     </main>
-    <!-- <footer class="footer">
-      <p>Desenvolvido por &copy;Carol Protásio</p>
-    </footer> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script> -->
-    <script src="index.js" type="module"></script>
+    <footer class="footer">
+      <p><a href="https://github.com/carolprotasio">Desenvolvido por Carol Protásio</a></p>
+    </footer>
+    
+    <!-- <script src="index.js" type="module"></script> -->
+
+    <script>
+      
+    const cardNumberInput = document.getElementById('cardNumber');
+
+    function maskify(str) {
+    return str.slice(0, -4).replace(/./g, '*') + str.slice(-4);
+    }
+
+    cardNumberInput.addEventListener('input', (e) => {
+    const input = e.target;
+    const value = input.value;
+
+    input.value = maskify(value);
+    });
+    event.preventDefault(); // prevent form submission
+    </script>
+   
+   
+
   </body>
 </html>

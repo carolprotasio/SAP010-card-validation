@@ -12,9 +12,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(126, 69, 126) url("img/bg3.jpg") center/cover;
+    background: black url("img/bg4-1.jpg") center/cover;
     overflow: hidden;
+    /* imagem BG: https://www.freepik.com/free-photos-vectors/black-line */
 }
+
 
 .card {
     background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
@@ -36,9 +38,10 @@ body {
 .card_title {
     font-weight: 600;
     font-size: 2.5rem;
-    color: #240810;
+    color: #f8f6f4;
+    /* color: rgba(255, 255, 255, 0.767); */
     margin: 1rem 0 1.5rem;
-    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.402);
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.402);
 }
 
 .card_col {
@@ -55,7 +58,7 @@ body {
 
 }
 .card_input--large {
-    font-size: 2rem;
+    font-size: 1.8em;
 }
 .card_input::placeholder {
     color: rgba(255, 255, 255, 0.5);
@@ -84,19 +87,43 @@ body {
 .bttn {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.732);
     font-size: 1em;
     padding: 0.5rem;
+    border: 1px solid black;
     border-radius: 10px;
     box-shadow: 1px 5 px 7 px rgba(0, 0, 0, 0.577);
 }
 
-/* .footer {
+.footer {
     display: flex;
-    align-self: flex-end;
-    
-} */
-
+    justify-content: center;
+    align-items: center;
+    /* color: rgba(255, 255, 255, 0.907); */
+    color: #ebe2d9;
+    font-size: 1.2em;
+    margin-top: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+       
+    /*
+    position: absolute will position the footer relative to the nearest positioned ancestor.
+    bottom: 0 will position the footer at the bottom of the container.
+    */
+  }
+.footer p {
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.802);
+}
+.footer a {
+    text-decoration:dashed;
+    color: #ebe2d9;
+}  
+.footer a:visited {
+    color: rgba(255, 255, 255, 0.907);
+    color: #ebe2d9;
+}
 
 @keyframes cardEnter {
     from {

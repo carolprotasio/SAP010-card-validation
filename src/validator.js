@@ -1,4 +1,4 @@
-/* const { TestWatcher } = require("jest"); */
+const { TestWatcher } = require("jest"); 
 
 /*
 fonte: https://www.w3schools.blog/credit-card-validation-javascript-js
@@ -16,42 +16,7 @@ diners: /^3(?:0[0-5]|[68][0-9])[0-9]{11}$/
 
 const validator = {
   
-  function creditCardValidation (cardNumber) {
 
-    var regEx = /^5[1-5][0-9]{14}$|^2(?:2(?:2[1-9]|[3-9][0-9])|[3-6][0-9][0-9]|7(?:[01][0-9]|20))[0-9]{12}$/;
-
-     if(cardNumber.value.match(regEx)) {
-        return true;
-      }
-     else {
-       alert("Porfavor digite o número válido do cartão");
-       return false;
-       }
-  }  
-
- /*  isValid(creditCardNumber) {
-    //converter o num do cartão em array
-    const array = creditCardNumber.split('').reverse();
-    const arra2 = [];
-
-
-    maskify(creditCardNumber) {
-      if(creditCardNumber.length <= 4) {
-        return creditCardNumber;
-      }
-      else { 
-        const string = creditCardNumber.split("");
-        const last4 = string.slice(-4).join("");
-        const firstNum = string.slice(0, 4).join("");
-        let numberHiden = firstNum.replace(/./g, "#" + "") + last4;
-        return numberHiden
-      }
-
-    };
-    
-    
-
-  } */
 
 }
 
