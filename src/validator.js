@@ -16,11 +16,11 @@ diners: /^3(?:0[0-5]|[68][0-9])[0-9]{11}$/
 
 const validator = {
   
-  function creditCardValidation (creditCradNum) {
+  function creditCardValidation (cardNumber) {
 
     var regEx = /^5[1-5][0-9]{14}$|^2(?:2(?:2[1-9]|[3-9][0-9])|[3-6][0-9][0-9]|7(?:[01][0-9]|20))[0-9]{12}$/;
 
-     if(creditCradNum.value.match(regEx)) {
+     if(cardNumber.value.match(regEx)) {
         return true;
       }
      else {
