@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Validador de cartão</title>
+    <title>Validador de Cartão</title>
     <link rel="stylesheet" href="style.css" />
     <link
     rel="stylesheet"
@@ -20,7 +20,7 @@
             <div class="card_row">
                 <div class="card_col">
                     <label for="cardNumber" class="card_label">Número do cartão:</label>
-                    <input type="text" class="card_input card_input--large" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" minlength="13" maxlength="16"/>
+                    <input type="text" class="card_input card_input--large" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" minlength="13" maxlength="16" pattern="\d+"/>
                 </div>
                 <div class="card_col card_chip"><img src="img/chip.svg" alt="chip"></div>
             </div>
@@ -28,11 +28,11 @@
             <div class="card_row">
             <div class="card_col">
                 <label for="cardExpiry" class="card_label">Data de validade:</label>
-                <input type="text" class="card_input" id="cardExpiry" placeholder="xx/xx">
+                <input type="text" class="card_input" id="cardExpiry" placeholder="xx/xx" pattern="\d+">
             </div>
             <div class="card_col">
                 <label for="cardCcv" class="card_label">CCV:</label>
-                <input type="text" class="card_input" id="cardCcv" placeholder="xxx">
+                <input type="text" class="card_input" id="cardCcv" placeholder="xxx" pattern="\d+">
             </div>
 
             <div class="card_col card_brand">
@@ -44,15 +44,15 @@
         </form>
         
     </div>
-    <div class="card2 res-title" id="result"></div>
+    <div class="card2 res-title" id="result">Informe os dados do cartão acima para ser validado</div>
     </main>
     <footer class="footer">
       <p><a href="https://github.com/carolprotasio">Desenvolvido por Carol Protásio</a></p>
     </footer>
     
-     <!-- <script src="index.js" type="module"></script>  -->
+      <script src="index.js" type="module"></script> 
 
-    <script>
+    <!--  <script>
           // function to mask the credit card number
           //verifica se o número de cartão tem 4 dígitos ou menos. Se tiver, ele retorna o número sem mascará-lo.
       function maskify(cc) {
@@ -86,7 +86,7 @@
           sum += digit;
           shouldDouble = !shouldDouble;
         }
-        //etorna true se a soma resultante for divisível por 10 e false caso contrário.
+        //retorna true se a soma resultante for divisível por 10 e false caso contrário.
         return (sum % 10) == 0;
       }
 
@@ -97,20 +97,20 @@
         const maskedNumber = maskify(cardNumber);
         const isValid = validateCardNumber(cardNumber);
 
-        document.getElementById('result').innerHTML = ` Os últimos 4 digitos do cartão digitada são: </br>
+        document.getElementById('result').innerHTML = ` Os últimos 4 digitos do cartão digitados são: </br>
           <div class="card-masked">${maskedNumber}</div>
           <div class="card-validity">${isValid ? 'Este cartão é <strong>VÁLIDO!</strong>' : 'Este cartão é inválido'}</div>
         `;
       }
 
-      // add event listeners to the card number input field
+      // add event listeners to the card number input field/faz a chamada
       const cardNumberInput = document.getElementById('cardNumber');
       cardNumberInput.addEventListener('input', updateCardInfo);
 
-
+ 
 
             
-  </script>
+  </script>  -->
     
   
    
