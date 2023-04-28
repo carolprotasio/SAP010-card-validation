@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Validador de Cartão</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"/>
+    <link rel="shortcut icon" href="img/iconCard.jpg" type="image/x-icon">
+  </head>
+  <body>
+    
+    <main>
+      <div class="card">
+        <form id="form">
+            <h1 class="card_title">
+                Validador de Cartão 
+            </h1>
+            <div class="card_row">
+                <div class="card_col">
+                    <label for="cardNumber" class="card_label">Número do cartão:</label>
+                    <input type="text" class="card_input card_input--large" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" minlength="13" maxlength="16" pattern="\d+"/>
+                </div>
+                <div class="card_col card_chip"><img src="img/chip.svg" alt="chip"></div>
+            </div>
+
+            <div class="card_row">
+            <div class="card_col">
+                <label for="cardExpiry" class="card_label">Data de validade:</label>
+                <input type="text" class="card_input" id="cardExpiry" placeholder="xx/xx" pattern="\d+" maxlength="4">
+            </div>
+            <div class="card_col">
+                <label for="cardCcv" class="card_label">CCV:</label>
+                <input type="text" class="card_input" id="cardCcv" placeholder="xxx" pattern="\d+" maxlength="3">
+            </div>
+
+            <div class="card_col card_brand">
+                <i id="cardBrand"></i></div>
+            </div> 
+            <!-- <div>
+              <button class="bttn" type="submit" onclick="creditCardValidation()">Validar</button>
+            </div> -->
+        </form>
+        
+    </div>
+    <div class="card2 res-title" id="result">Informe os dados do cartão acima para ser validado</div>
+    </main>
+    <footer class="footer">
+      <p><a href="https://github.com/carolprotasio">Desenvolvido por Carol Protásio</a></p>
+    </footer>
+    
+      <script src="index.js" type="module"></script> 
+
+    <!--  <script>
+          // function to mask the credit card number
+          //verifica se o número de cartão tem 4 dígitos ou menos. Se tiver, ele retorna o número sem mascará-lo.
+      function maskify(cc) {
+        if (cc.length <= 4) {
+          return cc;
+        }
+        const lastFourDigits = cc.slice(-4); // extrai os últimos 4 dígitos do número do cartão.
+        const masked = cc.slice(0, -4).replace(/./g, '#'); //cria uma string mascarada, substituindo cada dígito, exceto os últimos 4, por "#"
+        return masked + lastFourDigits; //retorna a string mascarada concatenada com os últimos 4 dígitos.
+      }
+
+      // function to validate the credit card using the Luhn algorithm
+      function validateCardNumber(cardNumber) {
+        //verifica se o número de cartão está vazio ou se o comprimento está fora do intervalo válido (entre 13 e 16 dígitos). Se for, retorna false.
+        if (!cardNumber || cardNumber.length < 13 || cardNumber.length > 16) {
+          return false;
+        }
+        //o algoritmo de Luhn, que soma os dígitos do número do cartão, alternando a partir do penúltimo dígito e dobrando os dígitos que aparecem em posições ímpares. Se a soma resultante for divisível por 10, o cartão é válido.
+        let sum = 0;
+        let shouldDouble = false;
+        for (let i = cardNumber.length - 1; i >= 0; i--) {
+          let digit = parseInt(cardNumber.charAt(i));
+
+          if (shouldDouble) {
+            digit *= 2;
+            if (digit > 9) {
+              digit -= 9;
+            }
+          }
+
+          sum += digit;
+          shouldDouble = !shouldDouble;
+        }
+        //retorna true se a soma resultante for divisível por 10 e false caso contrário.
+        return (sum % 10) == 0;
+      }
+
+      // function to update the HTML page with the masked number and validation result
+      //chamada quando o campo de número do cartão de crédito é atualizado e atualiza a página HTML com o número do cartão mascarado e se o cartão é valido.
+      function updateCardInfo() {
+        const cardNumber = document.getElementById('cardNumber').value;
+        const maskedNumber = maskify(cardNumber);
+        const isValid = validateCardNumber(cardNumber);
+
+        document.getElementById('result').innerHTML = ` Os últimos 4 digitos do cartão digitados são: </br>
+          <div class="card-masked">${maskedNumber}</div>
+          <div class="card-validity">${isValid ? 'Este cartão é <strong>VÁLIDO!</strong>' : 'Este cartão é inválido'}</div>
+        `;
+      }
+
+      // add event listeners to the card number input field/faz a chamada
+      const cardNumberInput = document.getElementById('cardNumber');
+      cardNumberInput.addEventListener('input', updateCardInfo);
+
+ 
+
+            
+  </script>  -->
+    
+  
+   
+
+  </body>
+</html>
