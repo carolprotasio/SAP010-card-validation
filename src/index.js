@@ -8,11 +8,26 @@ function updateCardInfo() {
   const maskedNumber = validator.maskify(cardNumber);
   const isValid = validator.isValid(cardNumber);
   let brand = '';
+ 
+  // seleciona todos os inputs de texto
+  const inputs = document.querySelectorAll('input[type="text"]');
+
+  // adiciona um listener de evento de entrada para cada input
+  inputs.forEach(input => {
+    input.addEventListener('input', () => {
+    // remove todos os caracteres não numéricos
+      input.value = input.value.replace(/\D/g, '');
+    });
+  }); 
+ 
+  
 
   if (!cardNumber || cardNumber.length < 13 || cardNumber.length > 16) {
     return false;
   }
 
+  
+ 
   if (cardNumber.match(/^4/)) {
     brand = 'Visa';
   } else if (cardNumber.match(/^5[1-5]/)) {
