@@ -16,53 +16,39 @@
 ***
 
 ## 1. Introdução
+# Validador de Cartão 
+- O que é um Validador de Cartão?
 
-O [algoritmo de Luhn](https://en.wikipedia.org/wiki/Luhn_algorithm), também
-chamado de módulo 10, é um método de soma de verificação, usado para validar
-números de identificação, como o IMEI de telefones celulares, cartões de crédito
-etc.
+Um validador de cartão de crédito é uma ferramenta usada para verificar se um número de cartão de crédito é válido e se está formatado corretamente.
 
-Esse algoritmo é simples. Obtemos o inverso do número a ser verificado (que
-contém apenas dígitos [0-9]); todos os números que ocupam uma posição par devem
-ser multiplicados por dois; se esse número for maior ou igual a 10, devemos
-adicionar os dígitos do resultado; o número a verificar será válido se a soma de
-seus dígitos finais for um múltiplo de 10.
-
-![gráfico do algoritmo de
-Luhn](https://www.101computing.net/wp/wp-content/uploads/Luhn-Algorithm.png)
+Cartões de débito, cartões pré-pagos e cartões-presente também podem ser validados usando esta ferramenta. Tudo o que você precisa fazer é inserir as informações do cartão e clicar em validar.
+### Lembre-se: Esta ferramenta não verifica ou valida CVV/CVC,data de vencimento do cartão e outros detalhes confidenciais do cartão. Ele apenas verifica e valida o número do cartão de crédito se está no formato correto e se passou na verificação do Algoritmo Luhn. 
 
 ## 2. Resumo do projeto
+# Como usar o Validador de Cartão de Crédito?
 
-Neste projeto, você precisará criar um aplicativo da Web que permita ao usuário
-validar o número de um cartão de crédito.  Além disso, você precisará
-implementar a funcionalidade para ocultar todos os dígitos de um cartão, exceto
-os quatro últimos.
+Para utilizar este Validador de Cartão de Crédito, basta seguir os passos abaixo e você poderá validar qualquer número de cartão de crédito.
 
-O tema é livre. Você deve pensar em quais situações da vida real um cartão de
-crédito precisaria ser validado e em como deveria ser a experiência do usuário
-(telas, explicações, mensagens, cores, marca?) etc.
-
-Como continuação do projeto de pré-admissão, você retrabalhará os fundamentos
-do JavaScript, incluindo conceitos como variáveis, condicionais e funções,
-bem como eventos e manipulação básica de DOM, fundamentos HTML e CSS.
-Ao desenvolver este projeto, você também se familiarizará com novos conceitos.
-
-### Os objetivos gerais deste projeto são os seguintes
-
-* Trabalhar com base em um boilerplate, a estrutura básica de um projeto em diferentes
-  pastas (através de módulos em JS).
-* Conhecer as ferramentas de manutenção e melhoria do código (linters e testes
-  unitários).
-* Aprenda sobre objetos, estruturas, métodos e iteração (loops) em JavaScript
-* Implementar controle de versão com git (e a plataforma github)
+Etapa 1: Insira o número do cartão de crédito no campo de entrada. Certifique-se de que não há espaços ou hífens entre os números. 
+Etapa 2: Clique no botão "VALIDAR" e a ferramenta validadora de cartão de crédito fará o resto.
+# Quais são os usos de um validador de cartão de crédito?
+Existem várias razões pelas quais você pode querer usar um validador de cartão de crédito. Alguns dos motivos mais comuns são:
+* Para verificar se um número de cartão de crédito é válido: Você pode usar um validador de cartão de crédito para verificar se um número de cartão de crédito é válido. Isso é útil se você estiver tentando verificar se um número de cartão de crédito está correto.
+* Para garantir um processamento de pagamento tranquilo: Você pode usar um validador de cartão de crédito para garantir um processamento de pagamento tranquilo. Isso porque pode ajudá-lo a formatar corretamente o número do cartão de crédito. Isso pode ajudar a reduzir as chances de ocorrência de erros/fraude durante o processamento do pagamento.
 
 ## 3. Considerações gerais
+# Perguntas Frequentes (FAQ)
+1. Devemos manter esses números de cartão de crédito em arquivo?
+Não, os números não são armazenados em nosso sistema. Os números são usados apenas para fins de validação e não são armazenados em nenhum lugar de nossos servidores.
 
-* Resolvemos este projeto individualmente. Recomendamos uma duração de 1-3 sprints.
-* Concentre-se em aprender e não apenas "concluir" o projeto.
-* Sugerimos que você não tente saber tudo antes de começar a codificar.
-  Não se preocupe muito agora com o que você _ainda_ não entende.
-  Você vai aprender.
+2. O que é o Algoritmo de Luhn?
+O Algoritmo Luhn é uma verificação usada para validar números de cartão de crédito. Essa verificação é executada pela ferramenta Validador de Cartão de Crédito para garantir que o número esteja formatado corretamente.
+
+3. Como posso saber se um cartão de crédito é válido?
+Você pode usar um validador de cartão de crédito para verificar se um cartão de crédito é válido. Isso é útil se você estiver tentando verificar se um número de cartão de crédito está correto e seguir o algoritmo de Luhn.
+
+4. Quais tipos de cartões de crédito podem ser validados?
+A ferramenta Validador de Cartão de Crédito pode validar todos os principais cartões de crédito, incluindo Visa, Mastercard, American Express, JCB, Discover, Diners Club e muito mais.
 
 ## 4. Marco: Critérios de Aceitação Mínimos do Projeto
 
