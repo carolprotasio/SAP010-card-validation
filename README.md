@@ -24,6 +24,8 @@ Um validador de cartão de crédito é uma ferramenta usada para verificar se um
 Cartões de débito, cartões pré-pagos e cartões-presente também podem ser validados usando esta ferramenta. Tudo o que você precisa fazer é inserir as informações do cartão e clicar em validar.
 ### Lembre-se: Esta ferramenta não verifica ou valida CVV/CVC,data de vencimento do cartão e outros detalhes confidenciais do cartão. Ele apenas verifica e valida o número do cartão de crédito se está no formato correto e se passou na verificação do Algoritmo Luhn. 
 
+# você pode acessar o validor através desse link: https://carolprotasio.github.io/SAP010-card-validation/
+
 ## 2. Resumo do projeto
 # Como usar o Validador de Cartão de Crédito?
 
