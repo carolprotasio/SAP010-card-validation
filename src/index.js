@@ -20,8 +20,7 @@ function updateCardInfo() {
     });
   }); 
  
-  
-
+  //verifica se o número de cartão está vazio ou se o comprimento está fora do intervalo válido (entre 13 e 16 dígitos). Se for, retorna false.
   if (!cardNumber || cardNumber.length < 13 || cardNumber.length > 16) {
     return false;
   }

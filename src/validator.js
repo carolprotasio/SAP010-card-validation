@@ -14,8 +14,7 @@ const validator = {
 
   // function to validate the credit card using the Luhn algorithm
   isValid: function (cardNumber) {
-    //verifica se o número de cartão está vazio ou se o comprimento está fora do intervalo válido (entre 13 e 16 dígitos). Se for, retorna false.
- 
+    
     let sum = 0;
     let shouldDouble = false;
     for (let i = cardNumber.length - 1; i >= 0; i--) {
